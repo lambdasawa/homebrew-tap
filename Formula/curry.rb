@@ -5,21 +5,21 @@
 class Curry < Formula
   desc "curried commandline"
   homepage "https://github.com/lambdasawa/curry"
-  version "0.0.4"
+  version "0.0.5"
   license "Apache License"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lambdasawa/curry/releases/download/v0.0.4/curry_0.0.4_Darwin_x86_64.tar.gz"
-      sha256 "877036d29f59df0beb9b64321f47b8d4bf5c78a7a876bf1f704843273f43f9fb"
+      url "https://github.com/lambdasawa/curry/releases/download/v0.0.5/curry_0.0.5_Darwin_x86_64.tar.gz"
+      sha256 "b437a2afb5bb9c42f109e7f91dfc30f808c8392766cf16081df9d31ecb76baf5"
 
       def install
         bin.install "curry"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lambdasawa/curry/releases/download/v0.0.4/curry_0.0.4_Darwin_arm64.tar.gz"
-      sha256 "7c3474bf2ee68407616fac15439563546cbf75342df340426fd93167d0d1fa1f"
+      url "https://github.com/lambdasawa/curry/releases/download/v0.0.5/curry_0.0.5_Darwin_arm64.tar.gz"
+      sha256 "ac963710b07c1932a179889b922c65e00bfbc2d066dec74955d92860609c7f31"
 
       def install
         bin.install "curry"
@@ -28,17 +28,17 @@ class Curry < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/lambdasawa/curry/releases/download/v0.0.4/curry_0.0.4_Linux_x86_64.tar.gz"
-      sha256 "5a7273576435764f729b855023c3e746666e9b54e7fe5c4d788ea7c13c7d45c9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/lambdasawa/curry/releases/download/v0.0.5/curry_0.0.5_Linux_arm64.tar.gz"
+      sha256 "48a6b7e19387db34cc8661d88e6d5a76a1cfb4a95f7a6fea9d6137b77e6e1235"
 
       def install
         bin.install "curry"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lambdasawa/curry/releases/download/v0.0.4/curry_0.0.4_Linux_arm64.tar.gz"
-      sha256 "f9ea98d83a6fc68a3fcb127a72e359fc81c4b00c66066644b91d133ce507f082"
+    if Hardware::CPU.intel?
+      url "https://github.com/lambdasawa/curry/releases/download/v0.0.5/curry_0.0.5_Linux_x86_64.tar.gz"
+      sha256 "1e48dce43aa7f3e01ad7ac8d8649e252f69a0cef25eb40312624f3b5151a71c8"
 
       def install
         bin.install "curry"
