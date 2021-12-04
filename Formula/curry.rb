@@ -5,21 +5,21 @@
 class Curry < Formula
   desc "curried commandline"
   homepage "https://github.com/lambdasawa/curry"
-  version "0.0.6"
+  version "0.0.7"
   license "Apache License"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/lambdasawa/curry/releases/download/v0.0.6/curry_0.0.6_Darwin_arm64.tar.gz"
-      sha256 "1b2a66b9a3d52583d0ee5ff2de2efe3ad22fc9e6a91e661aa432f73aec51e873"
+      url "https://github.com/lambdasawa/curry/releases/download/v0.0.7/curry_0.0.7_Darwin_arm64.tar.gz"
+      sha256 "054c5db47fed151285d209d701cf79e9ebc7aca6df9dd9b473390c5e67439d3f"
 
       def install
         bin.install "curry"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lambdasawa/curry/releases/download/v0.0.6/curry_0.0.6_Darwin_x86_64.tar.gz"
-      sha256 "19971f1d9bc1b485fa3764a1477713980816bc61fa00c26d4e2c80cf8b56498f"
+      url "https://github.com/lambdasawa/curry/releases/download/v0.0.7/curry_0.0.7_Darwin_x86_64.tar.gz"
+      sha256 "c8b0383312d4da8aa521e41a35c951786b16eabe2941734f8b916b28a9b8c446"
 
       def install
         bin.install "curry"
@@ -29,16 +29,16 @@ class Curry < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/lambdasawa/curry/releases/download/v0.0.6/curry_0.0.6_Linux_x86_64.tar.gz"
-      sha256 "40097791d2ff355790dd0a985badf47ae0fcf8ad613006b1335eb2a236f49e3c"
+      url "https://github.com/lambdasawa/curry/releases/download/v0.0.7/curry_0.0.7_Linux_x86_64.tar.gz"
+      sha256 "69a995c4d21f881727abe1b8e161241f2b47a75f20892a538e8dc9456fa7e9d4"
 
       def install
         bin.install "curry"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lambdasawa/curry/releases/download/v0.0.6/curry_0.0.6_Linux_arm64.tar.gz"
-      sha256 "a13872da40bb055a8e0a2478161d24771ff26d686dbcb7cecda61b342f75314d"
+      url "https://github.com/lambdasawa/curry/releases/download/v0.0.7/curry_0.0.7_Linux_arm64.tar.gz"
+      sha256 "062e570cd30c4c8157c62b7e0466629fd7c5233fc07ab04744ba44cefc80d2de"
 
       def install
         bin.install "curry"
